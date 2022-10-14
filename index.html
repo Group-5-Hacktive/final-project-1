@@ -16,8 +16,9 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
+      defer
     ></script>
-    <script src="javascript/contoh.js"></script>
+    <script src="javascript/contoh.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -141,49 +142,59 @@
       <h4 class="slogan">
         We Create Web Design, Development and Graphic Design
       </h4>
+      <div class="card">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="/source/icon1.png" class="card-img-top" alt="ICON1" />
+              <div class="card-body">
+                <h5 class="card-title text-white">Card title</h5>
+                <p class="desc text-white">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/source/icon2.png" class="card-img-top" alt="ICON2" />
+              <div class="card-body">
+                <h5 class="card-title text-white">Card title</h5>
+                <p class="desc text-white">
+                  This card has supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/source/icon3.png" class="card-img-top" alt="ICON3" />
+              <div class="card-body">
+                <h5 class="card-title text-white">Card title</h5>
+                <p class="desc text-white">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This card has even longer
+                  content than the first to show that equal height action.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card-group">
-      <div class="card">
-        <img src="source/icon1.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="source/icon2.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This card has supporting text below as a natural lead-in to
-            additional content.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="source/icon3.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
-        </div>
-      </div>
-    </div>
+
     <!-- gallery -->
     <div class="container">
       <h1 class="h1">GALLERY</h1>
@@ -202,6 +213,7 @@
         <img src="source/pic11.jpg" alt="picture" />
       </div>
     </div>
+
     <!-- clients slide (SLIDER MASIH 1 CLASS DENGAN SLIDER PERTAMA)-->
     <div class="container">
       <h1 class="h1">OUR CLIENTS</h1>
