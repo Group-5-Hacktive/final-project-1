@@ -1,0 +1,41 @@
+/* navbar */
+.navbar-nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 900px;
+    height: 3px;
+}
+/* slider */
+.carousel-item {
+   background-color: blueviolet;
+}
+
+.carousel-caption {
+    background-color: blue;
+}
+
+/* content > slogan */
+.slogan {
+    text-align: center;
+}
+
+.card {
+
+}
+
+/* Gallery */
+.h1 {
+    border-style: hidden;
+    background-color: black;
+    text-align: center;
+    color: yellow;
+
+}
+
+.h2 {
+    text-align: center;
+}
+/* navbar footer */
