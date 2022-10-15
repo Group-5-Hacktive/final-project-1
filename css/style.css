@@ -20,10 +20,17 @@
 /* content > slogan */
 .slogan {
     text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 700;
 }
 
 .card {
-
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.card-body {
+    background-color:black;
 }
 
 /* Gallery */
