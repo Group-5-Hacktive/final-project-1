@@ -121,8 +121,7 @@
 
 /* title card and contact */
 .h1 {
-    border-style: hidden;
-    background-color: rgb(145, 224, 255);
+
     text-align: center;
     color: rgb(6, 10, 12);
     margin: 10rem;
