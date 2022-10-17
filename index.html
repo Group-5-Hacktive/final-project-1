@@ -143,7 +143,7 @@
         <h4 class="desc-slogan">
           We Create Web Design, Development and Graphic Design
         </h4>
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="card">
+        <div class="row row-cols-1 row-cols-md-4 g-4" id="card">
           <div class="col">
             <div class="card h-100">
               <img src="/source/icon1.png" class="card-img-top" alt="ICON1" />
@@ -155,9 +155,7 @@
                   longer.
                 </p>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
+
             </div>
           </div>
           <div class="col">
@@ -170,9 +168,7 @@
                   additional content.
                 </p>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
+            
             </div>
           </div>
           <div class="col">
@@ -186,9 +182,21 @@
                   content than the first to show that equal height action.
                 </p>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+             
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/source/icon3.png" class="card-img-top" alt="ICON3" />
+              <div class="card-body">
+                <h5 class="card-title text-info">Card title</h5>
+                <p class="desc text-white">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This card has even longer
+                  content than the first to show that equal height action.
+                </p>
               </div>
+             
             </div>
           </div>
         </div>
@@ -199,19 +207,77 @@
     <div class="container">
       <h1 class="h1">GALLERY</h1>
       <h2 class="h2">This our works</h2>
-      <div class="img-gallery">
-        <img src="source/pic1.jpg" alt="picture" />
-        <img src="source/pic2.jpg" alt="picture" />
-        <img src="source/pic3.jpg" alt="picture" />
-        <img src="source/pic4.jpg" alt="picture" />
-        <img src="source/pic5.jpg" alt="picture" />
-        <img src="source/pic6.jpg" alt="picture" />
-        <img src="source/pic7.jpg" alt="picture" />
-        <img src="source/pic8.jpg" alt="picture" />
-        <img src="source/pic9.jpg" alt="picture" />
-        <img src="source/pic10.jpg" alt="picture" />
-        <img src="source/pic11.jpg" alt="picture" />
+      <div class="full-img" id="fullImgBox">
+        <img src="source/pic1.jpg" alt="picture" id="fullImg"/>
+        <span onclick="closeFullImg()">Close</span>
       </div>
+      <div class="full-img" id="fullImgBox2">
+        <img src="source/pic2.jpg" alt="picture" id="fullImg2"/>
+        <span onclick="closeFullImg()">Close</span>
+      </div>
+      <div class="full-img" id="fullImgBox3">
+        <img src="source/pic3.jpg" alt="picture" id="fullImg3"/>
+        <span onclick="closeFullImg()">Close</span>
+      </div>
+      <div class="full-img" id="fullImgBox4">
+        <img src="source/pic4.jpg" alt="picture" id="fullImg4"/>
+        <span onclick="closeFullImg()">Close</span>
+      </div>
+      <div class="full-img" id="fullImgBox5">
+        <img src="source/pic5.jpg" alt="picture" id="fullImg5"/>
+        <span onclick="closeFullImg()">Close</span>
+      </div>
+      <div class="full-img" id="fullImgBox6">
+        <img src="source/pic6.jpg" alt="picture" id="fullImg6"/>
+        <span onclick="closeFullImg()">Close</span>
+      </div>
+      <div class="img-gallery">
+        <img src="source/pic1.jpg" alt="picture"  onclick="openFullImg(this.src)"/>
+        <img src="source/pic2.jpg" alt="picture"  onclick="openFullImg(this.src)"/>
+        <img src="source/pic3.jpg" alt="picture"  onclick="openFullImg(this.src)"/>
+        <img src="source/pic4.jpg" alt="picture"  onclick="openFullImg(this.src)"/>
+        <img src="source/pic5.jpg" alt="picture"  onclick="openFullImg(this.src)"/>
+        <img src="source/pic6.jpg" alt="picture"  onclick="openFullImg(this.src)"/>
+      </div>
+      <script>
+        const fullImgBox = document.getElementById("fullImgBox");
+        const fullImgBox2 = document.getElementById("fullImgBox2");
+        const fullImgBox3 = document.getElementById("fullImgBox3");
+        const fullImgBox4 = document.getElementById("fullImgBox4");
+        const fullImgBox5 = document.getElementById("fullImgBox5");
+        const fullImgBox6 = document.getElementById("fullImgBox6");
+        const fullImg = document.getElementById("fullImg");
+        const fullImg2 = document.getElementById("fullImg2");
+        const fullImg3 = document.getElementById("fullImg3");
+        const fullImg4 = document.getElementById("fullImg4");
+        const fullImg5 = document.getElementById("fullImg5");
+        const fullImg6 = document.getElementById("fullImg6");
+        
+
+        function openFullImg(pic){
+          fullImgBox.style.display = "flex";
+          fullImg.src = pic;
+          fullImgBox2.style.display = "flex";
+          fullImg2.src = pic;
+          fullImgBox3.style.display = "flex";
+          fullImg3.src = pic;
+          fullImgBox4.style.display = "flex";
+          fullImg4.src = pic;
+          fullImgBox5.style.display = "flex";
+          fullImg5.src = pic;
+          fullImgBox6.style.display = "flex";
+          fullImg6.src = pic;
+        }
+
+        function closeFullImg(){
+          fullImgBox.style.display = "none";
+          fullImgBox2.style.display = "none";
+          fullImgBox3.style.display = "none";
+          fullImgBox4.style.display = "none";
+          fullImgBox5.style.display = "none";
+          fullImgBox6.style.display = "none";
+        }
+      </script>
     </div>
 
     <!-- clients slide (SLIDER MASIH 1 CLASS DENGAN SLIDER PERTAMA)-->

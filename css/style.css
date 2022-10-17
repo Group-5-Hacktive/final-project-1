@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 /* navbar */
 .navbar-nav {
     display: flex;
@@ -8,7 +12,16 @@
     width: 900px;
     height: 3px;
 }
-/* slider */
+
+.navbar-nav .nav-link:hover {
+    background: rgb(145, 224, 255);
+    color: rgb(10, 10, 10);
+    -webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+    transition:.3s ease-in-out;
+}
+/* slider note : slider client dan slider atas id/class masih sama*/
 .carousel-item {
    background-color: blueviolet;
 }
@@ -49,20 +62,74 @@
 }
 
 .card-body {
+    text-align: center;
     background-color:black;
 }
 
 
+
 /* Gallery */
+.img-gallery {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.img-gallery img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+
+.img-gallery img:hover {
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgb(135, 226, 241);
+    
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none ;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-img img {
+    width: 90%;
+    max-width: 500px;   
+}
+
+.full-img span {
+    position: absolute;
+    top:5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+
+/* title card and contact */
 .h1 {
     border-style: hidden;
-    background-color: black;
+    background-color: rgb(145, 224, 255);
     text-align: center;
-    color: yellow;
+    color: rgb(6, 10, 12);
+    margin: 10rem;
 
 }
 
 .h2 {
     text-align: center;
 }
-/* navbar footer */
+/* navbar footer note : nabar footer dan atas id / class nya masih sama*/
