@@ -147,3 +147,32 @@
         background: black;
         color: white;
       }
+
+      /* procject desc */
+
+      h2 {
+        background: #000;
+        color: rgb(145, 224, 255);
+        width: 300px;
+        padding: 10px;
+      }
+
+      .desc {
+        margin-top: -140px;
+        width: 1150px;
+        padding: 10px;
+        margin-left: 15px;
+      }
+
+      /* recent projects */
+    .recent {
+        margin-top: -10px;
+        width: 1150px;
+        padding: 10px;
+        margin-left: 15px;
+    }
+
+    .recentimg {
+      width: 300px;
+      height: auto;
+    }
