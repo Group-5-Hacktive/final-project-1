@@ -3,24 +3,26 @@
     padding: 0;
 }
 /* navbar */
-.navbar-nav {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    font-size: 20px;
-    padding: 20px;
-    width: 900px;
-    height: 3px;
+.navbar img {
+    margin-left: 20px;
+}
+.navbar {
+    background: #f6f6f6;
+}
+#navbar-text {
+    margin: 5px;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', serif;
+}
+.collapse li {
+    margin-right: 20px;
 }
 
-.navbar-nav .nav-link:hover {
-    background: rgb(145, 224, 255);
-    color: rgb(10, 10, 10);
-    -webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-    transition:.3s ease-in-out;
+.collapse li a:hover{
+    background: #4fbbff;
+    transition: all 0.5s;
 }
+
 /* slider note : slider client dan slider atas id/class masih sama*/
 .carousel-item {
    background-color: blueviolet;
@@ -131,4 +133,135 @@
 .h2 {
     text-align: center;
 }
-/* navbar footer note : nabar footer dan atas id / class nya masih sama*/
+
+/* navbar footer */
+.footer-top {
+    background: black;
+    padding: 2% 0;
+}
+
+.footer-top .btn {
+    background: #fff;
+    border: none;
+    margin: 30px 0;
+    box-shadow: 1px 2px #0d6efd;
+}
+
+#footer-col {
+    display: block;
+    float: left;
+    margin: 0% 0 0% 2%;
+}
+
+#footer-col h3 {
+    color: #fff;
+    margin-bottom: 15%;
+    margin-top: 0%;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+#footer-col p {
+    color: #fff;
+    line-height: 1.5em;
+    font-size: 0.8em;
+}
+
+#footer-col h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0;
+    float: left;
+}
+
+.photo li {
+    float: left;
+    width: 30%;
+    padding-right: 5px;
+    margin-right: 0px;
+}
+.photo li img {
+    display: block;
+}
+img {
+    max-width: 100%;
+}
+
+.footer-list li {
+    display: -webkit-box;
+    color: #fff;
+}
+.footer-list li #brands {
+    margin-right: 10px;
+}
+
+.social-icons li {
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    margin: 3px;
+    padding: 3px;
+}
+
+.social-icons li .fa-square-facebook:hover {
+    color: #4267B2;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-square-youtube:hover {
+    color: #FF0000;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-square-twitter:hover {
+    color: #1DA1F2;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-square-google-plus:hover {
+    color: #d34836;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-linkedin:hover {
+    color: #0077b5;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-blogger:hover {
+    color: #FF5722;
+    transition: .3s ease-in-out;
+}
+
+.footer-list #email {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.footer-list #email:hover {
+    color: rgb(5, 142, 255);
+    text-decoration: underline;
+    
+} 
+
+/* footer-bottom */
+.footer-bottom {
+    text-align: center;
+    background: #1DA1F2 ;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+.footer-bottom .brand {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-bottom .brand:hover {
+    color: white;
+}
