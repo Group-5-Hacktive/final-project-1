@@ -100,7 +100,7 @@
      }
 
      .modal-body {
-        height: 350px;
+        height: 500px;
      }
 
      .modal-footer {
@@ -110,6 +110,7 @@
      table, tr, th, td {
         border: 1px solid;
         text-align: center;
+        padding: 6px;
       }
 /* content > slogan */
 .slogan {
