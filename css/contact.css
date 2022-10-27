@@ -46,8 +46,8 @@ ul {
     position: absolute;
     top: 40%;
     left: 50px;
-    background-color: rgb(135, 226, 241);
-    color: black;
+    color: rgb(135, 226, 241);
+    background: #424146;
     padding-left: 20px;
     padding-right: 20px;
   }

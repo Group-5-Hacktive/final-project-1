@@ -31,6 +31,7 @@
     padding: 83px 0;
     background-image: url(./banner.jpg);
     margin-right: 190px;
+    width: 100%;
 }
 
 .banner h2 {

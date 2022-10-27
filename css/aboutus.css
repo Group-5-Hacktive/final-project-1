@@ -5,6 +5,7 @@
     padding: 50px 0;
     background-image: url(./banner.jpg);
     margin-right: 190px;
+    width: 100%;
 }
 
 /* navbar */
@@ -402,10 +403,10 @@ img {
 }
 
 /*Responsive*/
-@media (max-width: 640px)
+@media (max-width: 640px){
 .wrap {
     width: 90%;
-}
+}}
 
 @media (max-width: 768px)
 .wrap {
