@@ -27,25 +27,22 @@
 }
 
 /* Header */
-.text-wrapper {
-    
-    margin-top: 2rem;
-    max-width: 170px;
-    background-color: rgb(145, 224, 255);
-    color: black;
-    font-size: 28px;
+.banner{
+    padding: 83px 0;
+    background-image: url(./banner.jpg);
+    margin-right: 190px;
 }
 
- .banner {
-    display: flex;
-    margin: 20px;
-    height: 150px;
-    width: 1984px;
-
-}
-
-h3 {    
-    font-size: 20px;
+.banner h2 {
+    color: rgb(135, 226, 241);
+    background: #424146;
+    padding: 10px 60px 10px 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    float: left;
+    margin-left: 90px;
+    margin-top: -30px;
 }
 
 /* galery */

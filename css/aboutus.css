@@ -1,0 +1,498 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+.banner{
+    padding: 50px 0;
+    background-image: url(./banner.jpg);
+    margin-right: 190px;
+}
+
+/* navbar */
+.navbar img {
+    margin-left: 20px;
+}
+.navbar {
+    background: #f6f6f6;
+}
+#navbar-text {
+    margin: 5px;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', serif;
+}
+.collapse li {
+    margin-right: 20px;
+}
+
+.collapse li a:hover{
+    background: rgb(135, 226, 241);
+    transition: all 0.5s;
+}
+
+.wrap {
+    width: 80%;
+    margin: 0 auto;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+}
+
+.clear{
+    clear: both;
+}
+
+.banner h2 {
+    color: rgb(135, 226, 241);
+    background: #424146;
+    padding: 10px 60px 10px 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    float: left;
+}
+
+.main {
+    background: #f6f6f6;
+}
+
+.project-wrapper {
+    padding: 50px 0 30px;
+}
+
+.lsidebar {
+    display: block;
+    float: left;
+    margin: 0% 2.6% 0% 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.cont {
+    display: block;
+    float: left;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills li {
+    width: 100%;
+    height: 38px;
+    background: #424147;
+    margin-bottom: 20px;
+}
+
+.team1 {
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+/*about middle*/
+.about-middle {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.about-middle h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-middle h4 span {
+    background: #424147;
+    color: rgb(135, 226, 241);
+    padding: 5px 40px;
+}
+
+.about-middle p {
+    color: #000;
+    font-size: 0.99em;
+    padding: 30px 0;
+}
+
+/*span*/
+.span_1_of_about {
+    width: 32.2%;
+}
+
+.span_1_of_about-grids {
+    width: 17.8%;
+}
+
+.span_1_of_2 {
+    width: 48.2%;
+}
+
+.span_2_of_about {
+    width: 65.1%;
+}
+
+.span_2_of_about h2 {
+    text-transform: uppercase;
+    color: #5a595d;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.span_2_of_about h3 {
+    font-weight: 600;
+    color: #5a595d;
+    font-size: 0.89em;
+    margin-bottom: 20px;
+}
+
+.span_1_of_2 p {
+    font-size: 0.8125em;
+    color: #000;
+    line-height: 1.7em;
+}
+
+.span_1_of_about-grids img {
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -o-border-radius: 200px;
+    border: 4px solid #ffea00;
+}
+
+
+/*col*/
+.col_1_of_2:first-child {
+    margin-left: 0;
+}
+
+.col_1_of_about-grids {
+    display: block;
+    float: left;
+    margin: 0% 0 0% 9.6%;
+    margin-left: 9.6%;
+}
+
+.col_1_of_about-grids:first-child {
+    margin-left: 0;
+}
+
+.col_1_of_2 {
+    display: block;
+    float: left;
+    margin: 0% 0 0% 2.6%;
+    margin-left: 2.6%;
+}
+
+
+
+/*presentase*/
+.percentage {
+    float: left;
+    background: #000;
+    height: 40px;
+    color: #FFEA00;
+    padding: 8px 10px 0 10px;
+    font-size: 1.2em;
+}
+
+.presentasi1{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 74%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+.presentasi2{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 70%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+.presentasi3{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 60%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+.presentasi4{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 65%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+.presentasi5{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 68%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+.presentasi6{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 65%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+.presentasi7{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 50%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+.presentasi8{
+    background: rgb(135, 226, 241);
+    height: 40px;
+    float: left;
+    width: 65%;
+    color: #424147;
+    font-size: 1.4em;
+    padding: 5px 20px 0;
+}
+
+/* navbar footer */
+.footer-top {
+    background: black;
+    padding: 2% 0;
+}
+
+.footer-top .btn {
+    background: #fff;
+    border: none;
+    margin: 30px 0;
+    box-shadow: 1px 2px #0d6efd;
+}
+
+#footer-col {
+    display: block;
+    float: left;
+    margin: 0% 0 0% 2%;
+}
+
+#footer-col h3 {
+    color: #fff;
+    margin-bottom: 15%;
+    margin-top: 0%;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+#footer-col p {
+    color: #fff;
+    line-height: 1.5em;
+    font-size: 0.8em;
+}
+
+#footer-col h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.footer-ul {
+    float: left;
+}
+
+.photo li {
+    float: left;
+    width: 30%;
+    padding-right: 5px;
+    margin-right: 0px;
+}
+.photo li img {
+    display: block;
+}
+img {
+    max-width: 100%;
+}
+
+.footer-list li {
+    display: -webkit-box;
+    color: #fff;
+}
+.footer-list li #brands {
+    margin-right: 10px;
+}
+
+.social-icons li {
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    margin: 3px;
+    padding: 3px;
+}
+
+.social-icons li .fa-square-facebook:hover {
+    color: #4267B2;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-square-youtube:hover {
+    color: #FF0000;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-square-twitter:hover {
+    color: #1DA1F2;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-square-google-plus:hover {
+    color: #d34836;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-linkedin:hover {
+    color: #0077b5;
+    transition:.3s ease-in-out;
+}
+.social-icons li .fa-blogger:hover {
+    color: #FF5722;
+    transition: .3s ease-in-out;
+}
+
+.footer-list #email {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.footer-list #email:hover {
+    color: rgb(5, 142, 255);
+    text-decoration: underline;
+    
+} 
+
+/* footer-bottom */
+.footer-bottom {
+    text-align: center;
+    background: #1DA1F2 ;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+.footer-bottom .brand {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-bottom .brand:hover {
+    color: white;
+}
+
+/*Responsive*/
+@media (max-width: 640px)
+.wrap {
+    width: 90%;
+}
+
+@media (max-width: 768px)
+.wrap {
+    width: 90%;
+}
+
+@media (max-width: 1024px)
+.wrap {
+    width: 90%;
+}
+
+@media (max-width: 1280px)
+.wrap {
+    width: 90%;
+}
+
+@media (max-width: 1366px)
+.wrap {
+    width: 90%;
+}
+
+@media only screen and (max-width: 1024px)
+.wrap {
+    width: 95%;
+}
+
+@media only screen and (max-width: 1024px)
+.wrap {
+    width: 95%;
+}
+
+@media only screen and (max-width: 1024px)
+.wrap {
+    width: 95%;
+}
+
+@media only screen and (max-width: 1024px)
+.wrap {
+    width: 95%;
+}
+
+@media only screen and (max-width: 640px)
+.span_1_of_about {
+    width: 94%;
+    padding: 3%;
+}
+
+@media only screen and (max-width: 640px)
+.lsidebar {
+    margin: 0;
+}
+
+@media only screen and (max-width: 640px)
+.span_2_of_about {
+    width: 94%;
+    padding: 3%;
+}
+
+@media only screen and (max-width: 640px)
+.cont {
+    margin: 1% 0 1% 0%;
+}
+
+@media (max-width: 640px)
+.span_2_of_about h2 {
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 640px) and (min-width: 480px)
+.span_1_of_2 {
+    width: 94%;
+}
+
+@media only screen and (max-width: 640px) and (min-width: 480px)
+.col_1_of_2 {
+    margin: 1% 0 1% 0%;
+    margin-left: 0%;
+}
+
+@media only screen and (max-width: 640px) and (min-width: 480px)
+.span_1_of_about-grids {
+    width: 94%;
+    padding: 3%;
+}
+
+@media only screen and (max-width: 640px) and (min-width: 480px)
+.col_1_of_about-grids {
+    margin: 1% 0 1% 0%;
+    margin-left: 0%;
+}
