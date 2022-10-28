@@ -5,90 +5,138 @@ const date = new Date().toUTCString().slice(5, 16);
 // masukkan date ke dalam dateHTML
 dateHTML.innerText = date;
 
-// ### input
+// select the todo-form
+const todoForm = document.querySelector(".todo-form");
+// select the input box
 const todoInput = document.querySelector(".todo-input");
-const btnInput = document.querySelector(".todo-button");
-const todoList = document.querySelector(".todo-list");
+// select the <ul> with class="todo-items"
+const todoItemsList = document.querySelector(".todo-items");
 
-const KEY_TODOS = "Td_ft";
+// array which stores every todos
+let todos = [];
 
-// event listener
-btnInput.addEventListener("click", (event) => {
-  const todoList = JSON.parse(localStorage.getItem(KEY_TODOS));
-
-  let newTodo = [];
+// add an eventListener on form, and listen for submit event
+todoForm.addEventListener("submit", function (event) {
+  // prevent the page from reloading when submitting the form
   event.preventDefault();
-
-  // check jika inputnya kosong, maka beri alert
-  if (todoInput.value === "") {
-    alert("Input tidak boleh kosong");
-  } else {
-    newTodo = [...todos, input.value];
-  }
-
-  // membuat div
-  const div = document.createElement("div");
-  // menambahkan class ke div
-  div.classList.add("todo");
-
-  // membuat li
-  const li = document.createElement("li");
-  // manambahkan class ke li
-  li.classList.add("todo-item");
-  // masukkan todoInput ke li
-  li.innerText = todoInput.value;
-
-  // mebuat done btn
-  const done = document.createElement("button");
-  // menambahkan class ke button
-  done.classList.add("done-btn");
-  // menambahkan text Done ke button
-  done.innerText = "Done";
-
-  // membuat delete btn
-  const del = document.createElement("button");
-  // menambahkan class ke button
-  del.classList.add("delete-btn");
-  // menambahkan text Delete ke button
-  del.innerText = "Delete";
-
-  // masukkan li, done dan del ke dalam div
-  div.append(li, done, del);
-
-  // masukkan div ke dalam todoList
-  todoList.append(div);
-
-  // kosongkan input
-  todoInput.value = "";
-
-  localStorage.setItem(KEY_TODOS, JSON.stringify(newTodo));
-
-  renderTodo();
-
-  input.value = "";
+  addTodo(todoInput.value); // call addTodo function with input box current value
 });
 
-// event untuk done dan delete
-todoList.addEventListener("click", (event) => {
-  // mendapatkan element yg di click
-  const btn = event.target;
+// function to add todo
+function addTodo(item) {
+  // if item is not empty
+  if (item !== "") {
+    // make a todo object, which has id, name, and completed properties
+    const todo = {
+      id: Date.now(),
+      name: item,
+      completed: false,
+    };
 
-  // mendapatkan parent dari btn
-  const todo = btn.parentElement;
+    // then add it to todos array
+    todos.push(todo);
+    addToLocalStorage(todos); // then store it in localStorage
 
-  // check apakah yg diclick itu tombol done atau delete
-  // 1. check jika dia tombol done
-  if (btn.innerText === "Done") {
-    todo.classList.add("done-todo");
+    // finally clear the input box value
+    todoInput.value = "";
+  }
+}
 
-    // hapus button done
-    btn.remove();
-  } else if (btn.innerText === "Delete") {
-    todo.classList.add("remove");
+// function to render given todos to screen
+function renderTodos(todos) {
+  // clear everything inside <ul> with class=todo-items
+  todoItemsList.innerHTML = "";
 
-    // hapus todo menggunakan transitionend
-    todo.addEventListener("transitionend", () => {
-      todo.remove();
-    });
+  // run through each item inside todos
+  todos.forEach(function (item) {
+    // check if the item is completed
+    const checked = item.completed ? "checked" : null;
+
+    // make a <li> element and fill it
+    // <li> </li>
+    const li = document.createElement("li");
+    // <li class="item"> </li>
+    li.setAttribute("class", "item");
+    // <li class="item" data-key="20221028"> </li>
+    li.setAttribute("data-key", item.id);
+    /* <li class="item" data-key="20221028"> 
+          <input type="checkbox" class="checkbox">
+          Go to Gym
+          <button class="delete-button">X</button>
+        </li> */
+    // if item is completed, then add a class to <li> called 'checked', which will add line-through style
+    if (item.completed === true) {
+      li.classList.add("checked");
+    }
+
+    li.innerHTML = `
+      <input type="checkbox" class="checkbox" ${checked}>
+      ${item.name}
+      <button class="delete-button">Delete</button>
+    `;
+    // finally add the <li> to the <ul>
+    todoItemsList.append(li);
+  });
+}
+
+// function to add todos to local storage
+function addToLocalStorage(todos) {
+  // conver the array to string then store it.
+  localStorage.setItem("todos", JSON.stringify(todos));
+  // render them to screen
+  renderTodos(todos);
+}
+
+// function helps to get everything from local storage
+function getFromLocalStorage() {
+  const reference = localStorage.getItem("todos");
+  // if reference exists
+  if (reference) {
+    // converts back to array and store it in todos array
+    todos = JSON.parse(reference);
+    renderTodos(todos);
+  }
+}
+
+// toggle the value to completed and not completed
+function toggle(id) {
+  todos.forEach(function (item) {
+    // use == not ===, because here types are different. One is number and other is string
+    if (item.id == id) {
+      // toggle the value
+      item.completed = !item.completed;
+    }
+  });
+
+  addToLocalStorage(todos);
+}
+
+// deletes a todo from todos array, then updates localstorage and renders updated list to screen
+function deleteTodo(id) {
+  // filters out the <li> with the id and updates the todos array
+  todos = todos.filter(function (item) {
+    // use != not !==, because here types are different. One is number and other is string
+    return item.id != id;
+  });
+
+  // update the localStorage
+  addToLocalStorage(todos);
+}
+
+// initially get everything from localStorage
+getFromLocalStorage();
+
+// after that addEventListener <ul> with class=todoItems. Because we need to listen for click event in all delete-button and checkbox
+todoItemsList.addEventListener("click", function (event) {
+  // check if the event is on checkbox
+  if (event.target.type === "checkbox") {
+    // toggle the state
+    toggle(event.target.parentElement.getAttribute("data-key"));
+  }
+
+  // check if that is a delete-button
+  if (event.target.classList.contains("delete-button")) {
+    // get id from data-key attribute's value of parent <li> where the delete-button is present
+    deleteTodo(event.target.parentElement.getAttribute("data-key"));
   }
 });
