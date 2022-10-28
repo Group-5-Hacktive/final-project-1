@@ -1,5 +1,5 @@
 * {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -370,13 +370,14 @@ img {
     padding: 50px 0;
 }
 .banner h2 {
-    color: #4fbbff;
-    background: black;
+    color: rgb(135, 226, 241);
+    background: #424146;
     padding: 10px 60px 10px 20px;
     font-size: 2em;
     text-transform: uppercase;
-    font-weight: 650;
+    font-weight: 600;
     float: left;
+    margin-left: 90px;
 }
 .project-wrapper {
     padding: 50px 0 30px;
