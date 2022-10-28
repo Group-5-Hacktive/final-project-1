@@ -10,6 +10,27 @@ body {
   min-height: 100vh;
 }
 
+/* navbar */
+.navbar img {
+  margin-left: 20px;
+}
+.navbar {
+  background: #f6f6f6;
+}
+#navbar-text {
+  margin: 5px;
+  font-size: 1.1em;
+  font-family: 'Times New Roman', serif;
+}
+.collapse li {
+  margin-right: 20px;
+}
+
+.collapse li a:hover{
+  background: rgb(135, 226, 241);
+  transition: all 0.5s;
+}
+
 /* header */
 header {
   font-size: 1.2rem;
@@ -64,8 +85,8 @@ form button:focus {
 
 .todo {
   margin: 0.5rem;
-  background-color: #a27b5c;
-  color: black;
+  background-color: rgb(59, 55, 55);
+  color: white;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -101,7 +122,8 @@ form button:focus {
 }
 
 .done-btn {
-  background-color: #57837b;
+  background-color: rgb(135, 226, 241);
+  color: black;
 }
 
 .delete-btn:hover,
@@ -112,4 +134,23 @@ form button:focus {
 .remove {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
+}
+
+/* footer-bottom */
+.footer-bottom {
+  text-align: center;
+  background: #1DA1F2 ;
+  color: black;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+}
+.footer-bottom .brand {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-bottom .brand:hover {
+  color: white;
 }

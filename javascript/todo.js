@@ -10,24 +10,21 @@ const todoInput = document.querySelector(".todo-input");
 const btnInput = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
+const KEY_TODOS = "Td_ft";
+
 // event listener
 btnInput.addEventListener("click", (event) => {
+  const todoList = JSON.parse(localStorage.getItem(KEY_TODOS));
+
+  let newTodo = [];
   event.preventDefault();
 
   // check jika inputnya kosong, maka beri alert
   if (todoInput.value === "") {
     alert("Input tidak boleh kosong");
-    return;
+  } else {
+    newTodo = [...todos, input.value];
   }
-
-  // membuat element todo.
-  /*
-    <div class="todo">
-        <li class="todo-item">Todo ke 1</li>
-        <button class="done-btn">Done</button>
-        <button class="delete-btn">Delete</button>
-    </div>
-  */
 
   // membuat div
   const div = document.createElement("div");
@@ -63,6 +60,12 @@ btnInput.addEventListener("click", (event) => {
 
   // kosongkan input
   todoInput.value = "";
+
+  localStorage.setItem(KEY_TODOS, JSON.stringify(newTodo));
+
+  renderTodo();
+
+  input.value = "";
 });
 
 // event untuk done dan delete
@@ -76,20 +79,15 @@ todoList.addEventListener("click", (event) => {
   // check apakah yg diclick itu tombol done atau delete
   // 1. check jika dia tombol done
   if (btn.innerText === "Done") {
-    // yg diclick tombol done
-    // tambahkan class done-todo ke dalam todo
     todo.classList.add("done-todo");
 
     // hapus button done
     btn.remove();
   } else if (btn.innerText === "Delete") {
-    // yg di click tombol delete
-    // tambahkan class remove ke todo
     todo.classList.add("remove");
 
     // hapus todo menggunakan transitionend
     todo.addEventListener("transitionend", () => {
-      // hapus todo
       todo.remove();
     });
   }
